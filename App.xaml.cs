@@ -17,10 +17,10 @@ namespace jatek
             DotNetEnv.Env.Load();
             ConnStr = $"server={Env.GetString("DB_HOST")};user={Env.GetString("DB_USER")};password={Env.GetString("DB_PASS")};database={Env.GetString("DB_NAME")};";
 
-            // Bejelentkezési ablak megnyitása
-            //Bejelentkezes ablak = new Bejelentkezes();
-            //MainWindow = ablak;
-            //ablak.Show();
+            // Regisztrációs ablak megnyitása
+            Regisztracio ablak = new Regisztracio();
+            MainWindow = ablak;
+            ablak.Show();
         }
     }
 }

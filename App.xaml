@@ -1,8 +1,7 @@
 ﻿<Application x:Class="jatek.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:jatek"
-             StartupUri="MainWindow.xaml">
+             xmlns:local="clr-namespace:jatek">
     <Application.Resources>
          
     </Application.Resources>
