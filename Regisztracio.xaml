@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:jatek"
         mc:Ignorable="d"
-        Title="Regisztracio" Height="450" Width="800">
-    <Grid>
-        
+        Title="Regisztráció" Height="493" Width="348"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-6">
+        <Label Content="Regisztráció" FontSize="22" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top"/>
+        <Label Content="Felhasználónév" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="felhasznalo" HorizontalAlignment="Center" Margin="0,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Jelszó" HorizontalAlignment="Center" Margin="0,166,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="jelszo" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Margin="0,202,0,0"/>
+        <Label Content="Jelszó újra" HorizontalAlignment="Center" Margin="0,239,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="jelszoismet" HorizontalAlignment="Center" Margin="0,276,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="E-mail" HorizontalAlignment="Center" Margin="0,308,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="email" HorizontalAlignment="Center" Margin="0,347,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="regisztral" Content="Regisztráció" HorizontalAlignment="Center" Margin="0,390,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
