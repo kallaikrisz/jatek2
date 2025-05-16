@@ -18,7 +18,7 @@
         <PasswordBox x:Name="jelszoismet" HorizontalAlignment="Center" Margin="0,276,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="E-mail" HorizontalAlignment="Center" Margin="0,308,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="email" HorizontalAlignment="Center" Margin="0,347,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="regisztral" Content="Regisztráció" HorizontalAlignment="Center" Margin="0,390,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="regisztral" Content="Regisztráció" HorizontalAlignment="Center" Margin="0,390,0,0" VerticalAlignment="Top" Click="regisztral_Click"/>
 
     </Grid>
 </Window>
