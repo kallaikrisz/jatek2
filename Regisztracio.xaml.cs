@@ -18,6 +18,7 @@ namespace jatek
     /// <summary>
     /// Interaction logic for Regisztracio.xaml
     /// </summary>
+    /// 
     public partial class Regisztracio : Window
     {
         public Regisztracio()
