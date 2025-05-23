@@ -54,14 +54,23 @@ namespace jatek
                 var checkCmd=new MySql.Data.MySqlClient.MySqlCommand(sql,con);
                 checkCmd.Parameters.AddWithValue("@nev",nev);
                 checkCmd.Parameters.AddWithValue("@mails", emails);
-                int db=(int)checkCmd.ExecuteScalar();
+                long db=(long)checkCmd.ExecuteScalar();
+                cim.Content = db;
+                
                 if (db > 0)
                 {
                     MessageBox.Show("Ilyen felhasználó vagy email már létezik!", "Hiba!", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-
-
+                string jelszotarolt = Hashkeszit.KeszitHash(jelszos);
+                string insertsql = "INSERT INTO felhasznalo (jelszo,fnev,gmail) VALUES (@jel,@nev,@mail)";
+                using var insertCmd = new MySql.Data.MySqlClient.MySqlCommand(insertsql, con);
+                insertCmd.Parameters.AddWithValue("@jel", jelszotarolt);
+                insertCmd.Parameters.AddWithValue("@nev", nev);
+                insertCmd.Parameters.AddWithValue("@mail", emails);
+                insertCmd.ExecuteNonQuery();
+                MessageBox.Show("Sikeres regisztráció!", "Kész", MessageBoxButton.OK, MessageBoxImage.Information);
+                
             }
             catch (Exception ex) 
             {

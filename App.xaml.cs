@@ -15,7 +15,7 @@ namespace jatek
 
             // .env betöltése
             DotNetEnv.Env.Load();
-            ConnStr = $"server={Env.GetString("DB_HOST")};user={Env.GetString("DB_USER")};password={Env.GetString("DB_PASS")};database={Env.GetString("DB_NAME")};";
+            ConnStr = $"server={Env.GetString("DB_HOST")};user={Env.GetString("DB_USER")};password={Env.GetString("DB_PASS")};database={Env.GetString("DB_NAME")}";
 
             // Regisztrációs ablak megnyitása
             Regisztracio ablak = new Regisztracio();
